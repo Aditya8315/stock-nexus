@@ -2,11 +2,24 @@
 
 Your Trusted Platform for trading Analysis
 
-# React + Vite
+# React + Vite App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React application bootstrapped with [Vite](https://vitejs.dev/). Follow the instructions below to set up and run the project on your local machine.
 
-Currently, two official plugins are available:
+## Features
+- Fast build and development with Vite
+- Modern React setup with JSX and ES Modules
+- Hot Module Replacement (HMR)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+## Prerequisites
+Ensure you have the following installed on your machine:
+- **Node.js** (version 16 or above) [Download here](https://nodejs.org/)
+- **npm** (comes with Node.js) or **yarn** (optional)
+
+Verify installation:
+```bash
+node -v
+npm -v
+```
