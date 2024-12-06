@@ -23,3 +23,25 @@ Verify installation:
 node -v
 npm -v
 ```
+
+## If everything is fine then Clone this repository 
+```bash
+git clone https://github.com/Aditya8315/stock-nexus.git
+cd stcok-nexus
+```
+
+## Install Dependencies 
+```bash
+npm install
+```
+
+## Run the Development Server
+```bash
+npm run dev
+```
+
+## Now check on this URL for checking live preview
+
+http://localhost:5173
+
+
