@@ -83,7 +83,6 @@ const PublicPage = () => {
           top: "10%",
           right: isPanelOpen ? 300 : 0,
           transform: "translateY(-50%)",
-          color: "white",
           borderRadius: "25%",
           boxShadow: 2,
         }}
