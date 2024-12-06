@@ -44,4 +44,18 @@ npm run dev
 
 http://localhost:5173
 
+## Login Information and Restricted Access
+
+This application has restricted access to certain features based on user authentication. Below are the predefined user credentials for testing the login functionality.
+
+## Predefined Users
+Use any of the following credentials to log in:
+
+| **Username**   | **Password**       |
+|----------------|--------------------|
+| `john_doe`     | `password123`      |
+| `jane_smith`   | `12345password`    |
+| `admin`        | `admin123`         |
+
+
 
