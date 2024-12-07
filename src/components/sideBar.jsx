@@ -1,16 +1,19 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import { Typography, Box, Slide, IconButton } from "@mui/material";
+import { Typography, Box, Slide, IconButton, useTheme } from "@mui/material";
 
 import { mockUpdates } from "../constants/constants";
+
 const Sidebar = () => {
   const [isPanelOpen, setIsPanelOpen] = useState(false);
   const panelRef = useRef(null);
+  const theme = useTheme(); // Access the current theme
 
   const togglePanel = () => {
     setIsPanelOpen(!isPanelOpen);
   };
+
   const handleClickOutside = useCallback((event) => {
     if (panelRef.current && !panelRef.current.contains(event.target)) {
       setIsPanelOpen(false);
@@ -24,6 +27,7 @@ const Sidebar = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [handleClickOutside]);
+
   return (
     <>
       <Slide direction="left" in={isPanelOpen} mountOnEnter unmountOnExit>
@@ -40,6 +44,10 @@ const Sidebar = () => {
             p: 3,
             overflowY: "auto",
             maxHeight: "calc(100vh - 64px)",
+            color:
+              theme.palette.mode === "light"
+                ? "text.primary"
+                : "text.secondary", // Adjust text color
             "::-webkit-scrollbar": {
               display: "none",
             },
