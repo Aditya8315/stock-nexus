@@ -27,7 +27,7 @@ npm -v
 ## If everything is fine then Clone this repository 
 ```bash
 git clone https://github.com/Aditya8315/stock-nexus.git
-cd stcok-nexus
+cd stock-nexus
 ```
 
 ## Install Dependencies 
