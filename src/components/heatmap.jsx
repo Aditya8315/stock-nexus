@@ -23,7 +23,14 @@ ChartJS.register(
 
 const PnLHeatmap = ({ data }) => {
   const chartData = {
-    labels: data.map((item) => item.date),
+    labels: data.map((item) => {
+      const date = new Date(item.date);
+      return new Intl.DateTimeFormat("en-GB", {
+        day: "numeric",
+        month: "short",
+        year: "numeric",
+      }).format(date);
+    }),
     datasets: [
       {
         label: "PnL Heatmap",

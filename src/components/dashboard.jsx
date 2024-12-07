@@ -15,7 +15,7 @@ import {
   CardContent,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion";
 import { samplePnLData } from "../constants/constants";
 import TraderPnLChart from "./pnl";
 import PnLHeatmap from "./heatmap";
@@ -26,11 +26,11 @@ const Dashboard = () => {
   const [filteredData, setFilteredData] = useState([]);
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
-  const [selectedMonth, setSelectedMonth] = useState(""); 
-  const [selectedYear, setSelectedYear] = useState(""); 
+  const [selectedMonth, setSelectedMonth] = useState("");
+  const [selectedYear, setSelectedYear] = useState("");
   const navigate = useNavigate();
 
-  const currentMonth = new Date().getMonth(); 
+  const currentMonth = new Date().getMonth();
   const currentYear = new Date().getFullYear();
 
   useEffect(() => {
@@ -132,7 +132,7 @@ const Dashboard = () => {
     }),
   };
 
-  // Key Stats data structure for mapping
+  // Key Stats data for a user
   const keyStats = [
     { label: "Profit / Loss", value: 3200, type: "currency" },
     {
@@ -163,12 +163,11 @@ const Dashboard = () => {
         },
       }}
     >
-      {/* Dashboard Title */}
       <motion.div
         initial="hidden"
         animate="visible"
         variants={fadeInSlideUp}
-        custom={1} // Sequential animation
+        custom={1}
       >
         <Typography variant="h4" gutterBottom>
           Trader Dashboard
@@ -181,11 +180,7 @@ const Dashboard = () => {
                   <Typography variant="h6">{stat.label}</Typography>
                   <Typography
                     variant="h5"
-                    color={
-                      stat.type === "currency" && stat.value >= 0
-                        ? "green"
-                        : "red"
-                    }
+                    color={stat.value >= 0 ? "green" : "red"}
                   >
                     {stat.type === "currency"
                       ? `$${stat.value.toFixed(2)}`

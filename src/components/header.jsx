@@ -30,6 +30,7 @@ import {
   Dashboard,
 } from "@mui/icons-material";
 import image1 from "../assets/images/image1.png";
+import Sidebar from "./sideBar";
 
 const Header = ({ user, onThemeToggle, darkMode }) => {
   const navigate = useNavigate();
@@ -203,6 +204,7 @@ const Header = ({ user, onThemeToggle, darkMode }) => {
             </Button>
           )}
         </Toolbar>
+        <Sidebar />
       </AppBar>
     </>
   );
